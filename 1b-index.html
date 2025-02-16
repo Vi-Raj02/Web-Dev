@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Photo Gallery</title>
+    <style>
+        * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <img src="/public/images/photo_11.jpg" alt="Description of image 1">
+        <img src="/public/images/photo_12.jpg" alt="Description of image 2">
+        <img src="/public/images/photo_9.jpg" alt="Description of image 3">
+        <img src="/public/images/photo_7.jpg" alt="Description of image 4">
+        <img src="/public/images/photo_6.jpg" alt="Description of image 5">
+        <img src="/public/images/photo_4.jpg" alt="Description of image 6">
+        <img src="/public/images/photo_5.jpg" alt="Description of image 7">
+        <img src="/public/images/photo_1.jpg" alt="Description of image 8">
+    </div>
+</body>
+</html>
